@@ -1,0 +1,1 @@
+docker build -t snikhil1998/my-calculator .
