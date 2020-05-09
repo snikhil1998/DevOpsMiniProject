@@ -30,8 +30,7 @@ pipeline {
           steps{
             script {
               dockerImage = docker.build
-			  dockerImage1 = dockerImage registry + ":$BUILD_NUMBER"
-			  dockerImage2 = dockerImage registry + ":latest"
+			  dockerImage1 = dockerImage registry + ":$BUILD_NUMBER" registry + ":latest"
             }
           }
         }
@@ -39,8 +38,7 @@ pipeline {
           steps{
             script {
               docker.withRegistry( '', registryCredential ) {
-                dockerImage1.push()
-				dockerImage2.push()
+                dockerImage.push()
               }
             }
           }
