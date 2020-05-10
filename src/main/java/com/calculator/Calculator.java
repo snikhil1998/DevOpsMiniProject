@@ -18,6 +18,7 @@ public class Calculator
 	}
 	public static double divide(int a, int b)
 	{
+		double result;
 		if(b == 0)
 		{
 			throw new IllegalArgumentException("Cannot divide by zero");
