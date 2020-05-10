@@ -38,7 +38,7 @@ pipeline {
             script {
               docker.withRegistry( '', registryCredential ) {
                 dockerImage.push()
-				pushLatestBuild = "docker push " + registry
+				pushLatestBuild = "docker push " + registry + ":latest"
 				sh pushLatestBuild
               }
             }
