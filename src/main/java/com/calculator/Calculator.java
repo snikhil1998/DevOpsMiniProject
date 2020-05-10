@@ -18,16 +18,7 @@ public class Calculator
 	}
 	public static double divide(int a, int b)
 	{
-		double result;
-		if (b == 0)
-		{
-			throw new IllegalArgumentException("Cannot divide by zero");
-		}
-		else
-		{
-			result = Double.valueOf(a)/Double.valueOf(b);
-		}
-		return result;
+		return a / b;
 	}
 
 	public static void main(String[] args){
@@ -58,23 +49,30 @@ public class Calculator
 				int a = reader.nextInt();
 				System.out.print("b = ");
 				int b = reader.nextInt();
-				System.out.print("a"+oper[ch-1][1]+"b = ");
 				if(ch==1)
 				{
-					System.out.println(add(a,b)+"\n");
+					System.out.println("a+b = "+add(a,b));
 				}
 				else if(ch==2)
 				{
-					System.out.println(subtract(a,b)+"\n");
+					System.out.println("a-b = "+subtract(a,b));
 				}
 				else if(ch==3)
 				{
-					System.out.println(multiply(a,b)+"\n");
+					System.out.println("a*b = "+multiply(a,b));
 				}
 				else
 				{
-					System.out.println(divide(a,b)+"\n");
+					try
+					{
+						System.out.println("a/b = "+divide(a,b));
+					}
+					catch(ArithmeticException e)
+					{
+						System.out.println("Cannot divide by zero.");
+					}
 				}
+				System.out.println("");
 			}
 		}
 	}
