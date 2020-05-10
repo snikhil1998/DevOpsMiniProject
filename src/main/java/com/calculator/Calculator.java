@@ -29,10 +29,6 @@ public class Calculator
 		}
 		return result;
 	}
-	public static double sqrt(int n)
-    {
-        return java.lang.Math.sqrt(n);
-    }
 
 	public static void main(String[] args){
 		String[][] oper={{"Addition","+"},{"Subtraction","-"},{"Multiplication","*"},{"Division","/"}};
