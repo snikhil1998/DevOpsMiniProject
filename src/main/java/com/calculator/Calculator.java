@@ -19,7 +19,7 @@ public class Calculator
 	public static double divide(int a, int b)
 	{
 		double result;
-		if(b == 0)
+		if (b == 0)
 		{
 			throw new IllegalArgumentException("Cannot divide by zero");
 		}
@@ -28,10 +28,6 @@ public class Calculator
 			result = Double.valueOf(a)/Double.valueOf(b);
 		}
 		return result;
-	}
-	public static double sqrt(int n)
-	{
-		return java.lang.Math.sqrt(n);
 	}
 
 	public static void main(String[] args){
